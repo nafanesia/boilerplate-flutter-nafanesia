@@ -1,0 +1,50 @@
+name: boilerplate_flutter_nafanesia
+description: This is a boilerplate for flutter by nafanesia.
+
+# version build number
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  # Library to allow responsive size
+  flutter_screenutil: ^1.1.0
+  # Shared Preferences
+  shared_preferences: ^0.5.6+3
+  #Device Preview
+  device_preview: ^0.3.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  # add all assets images, icons, lang
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/lang/
+
+  # add font family, and next font asset
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto_thin.ttf
+          weight : 100
+        - asset: assets/fonts/roboto_light.ttf
+          weight: 200
+        - asset: assets/fonts/roboto_reguler.ttf
+        - asset: assets/fonts/roboto_medium.ttf
+          weight : 500
+        - asset: assets/fonts/roboto_bold.ttf
+          weight : 700
