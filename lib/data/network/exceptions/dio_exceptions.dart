@@ -1,39 +1,36 @@
-import 'package:boilerplate_flutter_nafanesia/data/network/exceptions/data_exception.dart';
 import 'package:dio/dio.dart';
 
 class DioExceptions {
-  DioError dioError;
+  String message;
+  dynamic data;
 
-  DioExceptions(this.dioError);
+  DioExceptions(this.message, this.data);
+}
 
-  DataExceptions getExceptions() {
-    String error;
-    bool isResponse = false;
-    dynamic data;
+DioExceptions getDioExceptions(dioError) {
+  String message;
+  dynamic data;
 
-    switch (dioError.type) {
-      case DioErrorType.CONNECT_TIMEOUT:
-        error = "Connecting timeout";
-        break;
-      case DioErrorType.SEND_TIMEOUT:
-        error = "Sending request timeout";
-        break;
-      case DioErrorType.RECEIVE_TIMEOUT:
-        error = "Receive data timeout";
-        break;
-      case DioErrorType.RESPONSE:
-        error = "Response error";
-        isResponse = true;
-        data = dioError.response.data;
-        break;
-      case DioErrorType.CANCEL:
-        error = "Request canceled";
-        break;
-      case DioErrorType.DEFAULT:
-        error = "No internet access";
-        break;
-    }
-
-    return DataExceptions(message: error, isResponse: isResponse, data: data);
+  switch (dioError.type) {
+    case DioErrorType.CONNECT_TIMEOUT:
+      message = "Connecting timeout";
+      break;
+    case DioErrorType.SEND_TIMEOUT:
+      message = "Sending request timeout";
+      break;
+    case DioErrorType.RECEIVE_TIMEOUT:
+      message = "Receive data timeout";
+      break;
+    case DioErrorType.RESPONSE:
+      message = "Response error";
+      data = dioError.response.data;
+      break;
+    case DioErrorType.CANCEL:
+      message = "Request canceled";
+      break;
+    case DioErrorType.DEFAULT:
+      message = "No internet access";
+      break;
   }
+  return DioExceptions(message, data);
 }
