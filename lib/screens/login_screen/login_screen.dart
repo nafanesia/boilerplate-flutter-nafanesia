@@ -1,7 +1,7 @@
 import 'package:boilerplate_flutter_nafanesia/constants/colors.dart';
 import 'package:boilerplate_flutter_nafanesia/constants/images.dart';
 import 'package:boilerplate_flutter_nafanesia/constants/sizes.dart';
-import 'package:boilerplate_flutter_nafanesia/data/network/api/login/login_api.dart';
+import 'package:boilerplate_flutter_nafanesia/data/network/api/login_api/login_api.dart';
 import 'package:boilerplate_flutter_nafanesia/enums/view_state.dart';
 import 'package:boilerplate_flutter_nafanesia/screens/base_screen.dart';
 import 'package:boilerplate_flutter_nafanesia/screens/routes.dart';

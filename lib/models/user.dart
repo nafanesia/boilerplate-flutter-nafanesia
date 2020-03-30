@@ -6,6 +6,13 @@ class User {
 
   User({this.id, this.name, this.username, this.email});
 
+  User.initial() {
+    id = 0;
+    name = '';
+    username = '';
+    email = '';
+  }
+
   User.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
