@@ -1,5 +1,5 @@
 name: boilerplate_flutter_nafanesia
-description: This is a boilerplate for flutter by nafanesia.
+description: This is a boilerplate flutter by nafanesia.
 
 # version build number
 version: 1.0.0+1
@@ -14,12 +14,30 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  # Library to allow responsive size
+  # A flutter plugin for adapting screen and font size.
+  # Guaranteed to look good on different models
   flutter_screenutil: ^1.1.0
-  # Shared Preferences
+  # lutter plugin for reading and writing simple key-value pairs.
+  # Wraps NSUserDefaults on iOS and SharedPreferences on Android.
   shared_preferences: ^0.5.6+3
-  #Device Preview
+  # Approximate how your app looks and performs on another device.
   device_preview: ^0.3.0+1
+  # A powerful Http client
+  dio: ^3.0.9
+  # Allows Flutter apps to discover network connectivity and configure themselves accordingly.
+  # It can distinguish between cellular vs WiFi connection.
+  connectivity: ^0.4.8+2
+  # A mixture between dependency injection (DI) and state management,
+  # built with widgets for widgets.
+  provider: ^4.0.4
+  # Simple direct Service Locator that allows to decouple the interface
+  # from a concrete implementation and to access the concrete
+  # implementation from everywhere in your App"
+  get_it: ^4.0.1
+  # A widget provided to the flutter scroll component drop-down refresh and pull up load.
+  pull_to_refresh: ^1.5.8
+  # Flutter plugin for SQLite, a self-contained, high-reliability, embedded, SQL database engine.
+  sqflite: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -42,7 +60,7 @@ flutter:
         - asset: assets/fonts/roboto_thin.ttf
           weight : 100
         - asset: assets/fonts/roboto_light.ttf
-          weight: 200
+          weight: 300
         - asset: assets/fonts/roboto_reguler.ttf
         - asset: assets/fonts/roboto_medium.ttf
           weight : 500

@@ -1,1 +1,0 @@
-const kAppName = 'Boilerplate Flutter';

@@ -1,5 +1,5 @@
-import 'package:boilerplate_flutter_nafanesia/constants/colors.dart';
-import 'package:boilerplate_flutter_nafanesia/constants/sizes.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_colors.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_sizes.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {

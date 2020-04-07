@@ -1,19 +1,15 @@
-import 'package:boilerplate_flutter_nafanesia/screens/home/home.dart';
-import 'package:boilerplate_flutter_nafanesia/screens/login/login.dart';
+import 'package:boilerplate_flutter_nafanesia/routes/src/path_route.dart';
+import 'package:boilerplate_flutter_nafanesia/screens/home_screen/home_screen.dart';
+import 'package:boilerplate_flutter_nafanesia/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:boilerplate_flutter_nafanesia/screens/splash_screen/splash_screen.dart';
 
 class Routes {
-  //static variables
-  static const String splash = '/';
-  static const String login = '/login';
-  static const String home = '/home';
-
   // Routes
   static final routes = <String, WidgetBuilder>{
-    splash: (BuildContext context) => SplashScreen(),
-    login: (BuildContext context) => Login(),
-    home: (BuildContext context) => Home(),
+    PathRoute.splash: (BuildContext context) => SplashScreen(),
+    PathRoute.login: (BuildContext context) => LoginScreen(),
+    PathRoute.home: (BuildContext context) => HomeScreen(),
   };
 
   //push
