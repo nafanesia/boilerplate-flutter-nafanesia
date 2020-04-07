@@ -1,14 +1,14 @@
-import 'package:boilerplate_flutter_nafanesia/constants/colors.dart';
-import 'package:boilerplate_flutter_nafanesia/constants/images.dart';
-import 'package:boilerplate_flutter_nafanesia/constants/sizes.dart';
-import 'package:boilerplate_flutter_nafanesia/data/network/api/login_api/login_api.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_colors.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_images.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_sizes.dart';
+import 'package:boilerplate_flutter_nafanesia/data/network/api/login_api.dart';
 import 'package:boilerplate_flutter_nafanesia/enums/view_state.dart';
 import 'package:boilerplate_flutter_nafanesia/screens/base_screen.dart';
-import 'package:boilerplate_flutter_nafanesia/screens/routes.dart';
 import 'package:boilerplate_flutter_nafanesia/widget/text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:boilerplate_flutter_nafanesia/routes/routes.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -95,7 +95,7 @@ class _LoginContainerState extends State<LoginContainer> {
                     }
                     //dummy for
                     if (model.user != null) {
-                      Routes.pushReplace(context, Routes.home);
+                      Routes.pushReplace(context, PathRoute.home);
                     }
                   },
                   shape: RoundedRectangleBorder(
@@ -108,7 +108,9 @@ class _LoginContainerState extends State<LoginContainer> {
                       ? SizedBox(
                           width: 20.w,
                           height: 20.w,
-                          child: CircularProgressIndicator())
+                          child: CircularProgressIndicator(
+                            backgroundColor: MyColors.white,
+                          ))
                       : Text(
                           "Login",
                           style: TextStyle(

@@ -1,4 +1,4 @@
-import 'package:boilerplate_flutter_nafanesia/data/network/api/posts_api/posts_api.dart';
+import 'package:boilerplate_flutter_nafanesia/data/network/api/posts_api.dart';
 import 'package:boilerplate_flutter_nafanesia/enums/view_state.dart';
 import 'package:boilerplate_flutter_nafanesia/screens/base_screen.dart';
 import 'package:boilerplate_flutter_nafanesia/screens/home_screen/widgets/home_app_bar.dart';

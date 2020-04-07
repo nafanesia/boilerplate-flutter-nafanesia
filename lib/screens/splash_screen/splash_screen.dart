@@ -1,9 +1,9 @@
-import 'package:boilerplate_flutter_nafanesia/constants/images.dart';
-import 'package:boilerplate_flutter_nafanesia/constants/sizes.dart';
-import 'package:boilerplate_flutter_nafanesia/data/local/database.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_images.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_sizes.dart';
+import 'package:boilerplate_flutter_nafanesia/data/local/sqlite.dart';
 import 'package:boilerplate_flutter_nafanesia/locator.dart';
 import 'package:boilerplate_flutter_nafanesia/models/user.dart';
-import 'package:boilerplate_flutter_nafanesia/screens/routes.dart';
+import 'package:boilerplate_flutter_nafanesia/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,10 +22,10 @@ class _SplashScreenState extends State<SplashScreen> {
       User user = await _sqlite.getUser();
       if (user != null) {
         //add to stream
-        _sqlite.addUser(user);
-        Routes.pushReplace(context, Routes.home);
+        _sqlite.addUserStreamController(user);
+        Routes.pushReplace(context, PathRoute.home);
       } else {
-        Routes.pushReplace(context, Routes.login);
+        Routes.pushReplace(context, PathRoute.login);
       }
     });
   }

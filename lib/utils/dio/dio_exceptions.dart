@@ -13,23 +13,23 @@ DioExceptions getDioExceptions(dioError) {
 
   switch (dioError.type) {
     case DioErrorType.CONNECT_TIMEOUT:
-      message = "Connecting timeout";
+      message = "Connection timeout with server";
       break;
     case DioErrorType.SEND_TIMEOUT:
-      message = "Sending request timeout";
+      message = "Send timeout in connection with server";
       break;
     case DioErrorType.RECEIVE_TIMEOUT:
-      message = "Receive data timeout";
+      message = "Receive timeout in connection with server";
       break;
     case DioErrorType.RESPONSE:
       message = "Response error";
       data = dioError.response.data;
       break;
     case DioErrorType.CANCEL:
-      message = "Request canceled";
+      message = "Request to server was cancelled";
       break;
     case DioErrorType.DEFAULT:
-      message = "No internet access";
+      message = "Connection to server failed due to internet connection";
       break;
   }
   return DioExceptions(message, data);

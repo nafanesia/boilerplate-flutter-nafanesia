@@ -17,7 +17,10 @@ class Sqlite {
     _db = await DatabaseHelper.initDatabase();
   }
 
-  void addUser(User user) {
+  void addUserStreamController(User user) {
+    if (userController.isClosed) {
+      userController = StreamController<User>();
+    }
     userController.add(user);
     userController.close();
   }

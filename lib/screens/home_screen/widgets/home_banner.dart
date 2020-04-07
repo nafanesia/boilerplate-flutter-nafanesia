@@ -1,7 +1,10 @@
-import 'package:boilerplate_flutter_nafanesia/constants/colors.dart';
-import 'package:boilerplate_flutter_nafanesia/constants/images.dart';
-import 'package:boilerplate_flutter_nafanesia/constants/sizes.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_colors.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_images.dart';
+import 'package:boilerplate_flutter_nafanesia/constants/my_sizes.dart';
+import 'package:boilerplate_flutter_nafanesia/data/local/sqlite.dart';
+import 'package:boilerplate_flutter_nafanesia/locator.dart';
 import 'package:boilerplate_flutter_nafanesia/models/user.dart';
+import 'package:boilerplate_flutter_nafanesia/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,11 +42,17 @@ class HomeBanner extends StatelessWidget {
                             fontWeight: FontWeight.w700)),
                   ],
                 ),
-                CircleAvatar(
-                  radius: 30.w,
-                  backgroundColor: Colors.transparent,
-                  child: Image.asset(
-                    MyImages.avatar1,
+                GestureDetector(
+                  onTap: () {
+                    locator<Sqlite>().deleteUser();
+                    Routes.pushReplace(context, PathRoute.login);
+                  },
+                  child: CircleAvatar(
+                    radius: 30.w,
+                    backgroundColor: Colors.transparent,
+                    child: Image.asset(
+                      MyImages.avatar1,
+                    ),
                   ),
                 )
               ],

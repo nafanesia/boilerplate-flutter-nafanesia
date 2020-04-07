@@ -1,7 +1,7 @@
-import 'package:boilerplate_flutter_nafanesia/data/network/api/endpoint.dart';
-import 'package:boilerplate_flutter_nafanesia/data/network/exceptions/dio_exceptions.dart';
+import 'package:boilerplate_flutter_nafanesia/data/network/endpoint.dart';
 import 'package:boilerplate_flutter_nafanesia/data/network/provider_api/provider_api.dart';
-import 'package:boilerplate_flutter_nafanesia/data/network/response_api/response_api.dart';
+import 'package:boilerplate_flutter_nafanesia/utils/dio/response_api.dart';
+import 'package:boilerplate_flutter_nafanesia/utils/dio/dio_exceptions.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
