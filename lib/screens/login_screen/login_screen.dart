@@ -4,7 +4,7 @@ import 'package:boilerplate_flutter_nafanesia/constants/my_sizes.dart';
 import 'package:boilerplate_flutter_nafanesia/data/network/api/login_api.dart';
 import 'package:boilerplate_flutter_nafanesia/enums/view_state.dart';
 import 'package:boilerplate_flutter_nafanesia/screens/base_screen.dart';
-import 'package:boilerplate_flutter_nafanesia/widget/text_field_widget.dart';
+import 'package:boilerplate_flutter_nafanesia/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
